@@ -41,8 +41,9 @@ public class FileRead {
         console.close();
 
         if (fileRead) {
+            nameList = BubbleSort.sort(nameList);
             System.out.println();
-            System.out.println("The " + nameList.length + " names");
+            System.out.println("The sorted list of " + nameList.length + " names");
             for (int i = 0; i < nameList.length; i++) {
                 idx = i + 1;
                 System.out.println("Name[" + idx + "]: " + nameList[i]);
