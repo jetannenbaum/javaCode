@@ -52,8 +52,9 @@ public class FileReadLinkedList {
 
         if (fileRead) {
             System.out.println();
-            System.out.println("The list of names");
-            LinkedList.Node n = linkedList.head;
+            System.out.println("The sorted list of names");
+            LinkedList sortedList = LinkedBubbleSort.sort(linkedList);
+            LinkedList.Node n = sortedList.head;
             while (n != null) {
                 idx = idx + 1;
                 System.out.println("Name[" + idx + "]: " + n.name);
