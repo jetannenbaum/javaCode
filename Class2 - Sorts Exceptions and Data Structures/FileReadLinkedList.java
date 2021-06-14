@@ -27,7 +27,9 @@ public class FileReadLinkedList {
                 }
                 else {
                     prevNode.next = currNode;
+                    currNode.prev = prevNode;
                     prevNode = currNode;
+
                 }
             }
             fileRead = true;
@@ -53,7 +55,7 @@ public class FileReadLinkedList {
         if (fileRead) {
             System.out.println();
             System.out.println("The sorted list of names");
-            LinkedList sortedList = LinkedBubbleSort.sort(linkedList);
+            LinkedList sortedList = LinkedInsertionSort.sort(linkedList);
             LinkedList.Node n = sortedList.head;
             while (n != null) {
                 idx = idx + 1;
